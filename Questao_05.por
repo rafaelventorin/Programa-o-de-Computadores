@@ -5,7 +5,7 @@ programa {
 
     para(inteiro cont = 1; cont <=15; cont ++){
 
-    escreva("Informe o ",cont, "° número e depois tecle enter: \n")
+    escreva("Digite o ",cont, "° número e depois tecle enter: \n")
     leia(numero)
     se(cont == 1){
       maiorNumero = numero

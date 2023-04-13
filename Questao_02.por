@@ -4,11 +4,11 @@ programa {
     real numero1, numero2, resultado
     caracter operacao
 
-    escreva("Informe o primeiro número e depois tecle enter: \n")
+    escreva("Digite o primeiro número e depois tecle enter: \n")
     leia(numero1)
-    escreva("Informe o segundo número e depois tecle enter: \n")
+    escreva("Digite o segundo número e depois tecle enter: \n")
     leia(numero2)
-    escreva("Informe a operação aritimética que deseja realizar através dos símbolos: + (para soma); - (para subtração); * (para mutiplicação); / (para divisão) e depois tecle enter. \n")
+    escreva("Digite a operação aritimética que deseja realizar através dos símbolos: + (para soma); - (para subtração); * (para mutiplicação); / (para divisão) e depois tecle enter. \n")
     leia(operacao)
 
     escolha(operacao)

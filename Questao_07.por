@@ -3,47 +3,48 @@ programa
 	inclua biblioteca Matematica --> mat
 	funcao inicio()
 	{
-		inteiro numero, resultado = 0, sequencia = 0
-    real raiz
-    cadeia operacaoMatematica
+		real operacaoMatematica, potencia, raizQuadrada
+		inteiro contador, numero, resultado, opcao
 
-		escreva("Digite um valor entre 1 e 10 e depois tecle enter. \n")
-		leia(numero)
-		escreva("Digite o símbolo da operação desejada, sendo: + para tabuada de soma, - para tabuada de subtração, * para tabuada de mutiplicação, * para tabuada de divisão, & para potenciação e # para a raiz quadrada. \n")
-    leia(operacaoMatematica)
+      escreva("Para efetuar a tabuada, digite um número entre 1 e 10 e depois tecle enter. \n")
+      leia(numero)
 
-		escolha(operacaoMatematica){
+		  
+          escreva("Digite o número da operação desejada, sendo: '1' para tabuada de soma, '2' para tabuada de subtração, '3' para tabuada de mutiplicação, '4' para tabuada de divisão, & para potenciação e # para a raiz quadrada. \n")
+          leia(operacaoMatematica)
+
+          para(contador = 1; contador <=10; contador++){
+          
+              se(operacaoMatematica == 1){
+              resultado = numero + contador
+              escreva(numero, " + ", contador, " = ", resultado, "\n")
+              
+              }senao se(operacaoMatematica == 2){
+              resultado = contador - numero
+              escreva(contador, " - ", numero, " = ", resultado, "\n")
+              
+              }senao se(operacaoMatematica == 3){
+              resultado = numero * contador
+              escreva(numero, " x ", contador, " = ", resultado, "\n")
+              
+              }senao{
+              resultado = contador / numero
+              escreva(contador, " / ", numero, " = ", resultado, "\n")
+              }
+          }
+
+          escreva("Para realizar os cálculos de pontenciação e raiz quadrada de " ,numero, ", digite '1'. Do contrário digite '2' para finalizar. \n")
+          leia(opcao)
             
-            caso '+':
-                  faca{  resultado = numero + sequencia
-                      escreva(resultado, " = ", numero, " + ", sequencia, "\n")
-                      sequencia ++
-                  }enquanto(sequencia<=10)
-            pare
+            se(opcao == 1){
+            potencia = mat.potencia(numero, 3.0)
+            raizQuadrada = mat.raiz (numero, 2.0)
+            escreva("O número ao cubo é: " , potencia , ". E a raiz quadrada do número é: ", raizQuadrada , ". \n")
+        
+            }senao{
+            escreva("Processo finalizado!")
+            }
 
-            caso '-':
-                  faca{  resultado = numero - sequencia
-                      escreva(resultado, " = ", numero, " - ", sequencia, "\n")
-                      sequencia ++
-                  }enquanto(sequencia<=10)
-            pare
-
-            caso '*':
-                  faca{  resultado = numero * sequencia
-                      escreva(resultado, " = ", numero, " * ", sequencia, "\n")
-                      sequencia ++
-                  }enquanto(sequencia<=10)
-            pare
-
-            caso '&':
-                    escreva(numero,"² = ",(numero*numero))
-            pare
-
-            caso '#':
-                    raiz = mat.raiz(numero,2.0)
-			              escreva("A raiz quadrada de ",numero," é: ",raiz"\n")
-            pare
-		}
 		
 	}
 }

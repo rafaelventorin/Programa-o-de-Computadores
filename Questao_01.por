@@ -3,9 +3,9 @@ programa {
   {
     real nota1, nota2, mediafinal
 
-    escreva("Informe a primeira nota obtida no semestre e depois tecle enter: \n") 
+    escreva("Digite a primeira nota obtida no semestre e depois tecle enter: \n") 
     leia(nota1)
-    escreva("Informe a segunda nota obtida no semestre e depois tecle enter: \n") 
+    escreva("Digite a segunda nota obtida no semestre e depois tecle enter: \n") 
     leia(nota2)
     escreva("A média obtida das notas: \n", nota1, " + ", nota2, " = " ,mediafinal=(nota1 + nota2)/2,"\n") 
 
